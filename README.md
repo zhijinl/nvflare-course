@@ -15,12 +15,13 @@ You can find sample data here: <include link>
 When you're ready, run the container using:
 ```bash
 docker run -d --rm --shm-size 8G --gpus=all \
+    --ulimit memlock=-1 --ulimit stack=67108864 \
     --env LAB_PATH=$(pwd -P) --name nvflare-monai \
     -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v $(pwd -P)/data:/flare/data \
     -v $(pwd -P)/notebooks:/flare/notebooks \
-    -p 8888:8888 
+    --net=host \
     gtc-dli-nvflare-monai
 ```
 
