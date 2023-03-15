@@ -7,7 +7,6 @@ docker run --rm --shm-size 8G --gpus=all \
     -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /tmp:/tmp \
-    -v $(pwd -P)/data:/flare/data \
     -v $(pwd -P)/notebooks:/flare/notebooks \
     --net=host \
     gtc-dli-nvflare-monai \
