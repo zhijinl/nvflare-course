@@ -19,7 +19,9 @@ rm -r notebooks/.ipynb_checkpoints
 rm -r notebooks/examples
 rm -r notebooks/hello-numpy-cross-val-workspace
 rm -r notebooks/poc_workspace
-rm -r notebooks/monai_workspace
+rm -r notebooks/monai_poc_workspace
+rm -r notebooks/example_workspace
+rm -r notebooks/data
 rm -r /tmp/monai_workspce
 rm -r /tmp/fl-dashboard
 
