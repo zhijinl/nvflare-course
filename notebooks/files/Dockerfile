@@ -29,7 +29,7 @@ RUN git clone https://github.com/NVIDIA/NVFlare.git
 
 # Install latest nvflare and monai from dev source
 WORKDIR /flare/NVFlare
-RUN git checkout dev
+RUN git checkout 8a3e3cb0814d02f0cf6c13464fb28f3e12a980af
 RUN pip uninstall -yq nvflare monai-nvflare
 RUN pip install -e .
 WORKDIR /flare/NVFlare/integration/monai
