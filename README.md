@@ -11,7 +11,7 @@ Learning is seamless and independent of the underlying ML framework,
 whether it’s PyTorch, TensorFlow, or traditional frameworks such as
 numpy, scikit-learn, xgboost etc.
 
-In this workshop, we will illustrate how quickly you can move
+In this DLI course, we will illustrate how quickly you can move
 Federated algorithms from simulation to production. Additionally, we
 will showcase diverse applications across industries, such as fraud
 detection in financial services, medical imaging segmentation, and
@@ -19,27 +19,27 @@ cross-country training for autonomous vehicles.
 
 # Course Outline
 
-The content of this DLI course is as follows:
-- **Notebook 00_Overview**: this notebook gives an introduction to
+The contents of this DLI are broken down into multiple notebooks under
+the [notebooks](notebooks/) folder:
+- **00_Overview**: this notebook gives an introduction to
   Federated Learning and basic concepts of NVIDIA FLARE.
-- **Notebook 01_Client_APIs_and_Simulator**: this notebook illustrates
+- **01_Client_APIs_and_Simulator**: this notebook illustrates
   how easily we can adapt typical compute / training workflows to a
   federated paradigm using Client APIs, and run a federated workflow
   using Simulator.
-- **Notebook 02_Provision_and_PoC_Mode**: this notebook dives in the
+- **02_Provision_and_PoC_Mode**: this notebook dives in the
   concept of provisioning for real-world deployment of federated
   applications. We illustrate the provision process with an example
   using Proof-of-Concept (PoC) mode with NVIDIA FLARE.
-- **Notebook 03_Dashboard**: this notebook shows how to manage
+- **03_Dashboard**: this notebook shows how to manage
   federated projects using web UI with FLARE Dashboard.
-- **Notebook 04_Example_1_Medical_Imaging_with_MONAI**: this notebook
+- **04_Example_1_Medical_Imaging_with_MONAI**: this notebook
   includes a real-world example of medical image segmentation using
   NVIDIA FLARE and the MONAI framework.
-- **Notebook 05_Example_2_Financial_Services_Fraud_Detection**: this
+- **05_Example_2_Financial_Services_Fraud_Detection**: this
   notebook includes a real-world example of fraud detection in
   finanicla services using NVIDIA FLARE
-- **Notebook
-  06_Example_3_Autonomous_Vehicles_Cross_Country_Training**: this
+- **06_Example_3_Autonomous_Vehicles_Cross_Country_Training**: this
   notebook includes a real-world example of cross-country training in
   autonomous vehicles using NVIDIA FLARE
 
@@ -59,16 +59,18 @@ When you're ready, run the container using:
 ```bash
 docker run -d --rm --shm-size 8G --gpus=all \
     --ulimit memlock=-1 --ulimit stack=67108864 \
-    --env LAB_PATH=$(pwd -P) --name dli-nvflare \
+    --env LAB_PATH=$(pwd -P) \
+    --name dli-nvflare \
     -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v $(pwd -P)/data:/flare/data \
     -v $(pwd -P)/notebooks:/flare/notebooks \
     --net=host \
-    gtc-dli-nvflare
+    gtc-dli-nvflare bash -c \
+    "jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --notebook-dir=/flare/notebooks --NotebookApp.allow_origin='*'"
 ```
 This runs the container in a detached state.
 
 You can access the course material by visiting `localhost:8888` in
 your web browser.  To stop the container when finished, run `docker
-stop nvflare-monai`.
+stop dli-nvflare`.
