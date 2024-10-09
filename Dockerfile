@@ -4,14 +4,21 @@ FROM ${BASE_IMAGE}
 ENV DEBIAN_FRONTEND=noninteractive
 ENV NVIDIA_DRIVER_CAPABILITIES graphics,video,compute,utility
 
-RUN apt update && apt-get install -y python3.10 python3-pip git
+# Install Python3.10, FLARE supports Python3.8, 9, 10
+RUN apt update && apt-get install -y software-properties-common
+RUN add-apt-repository -y ppa:deadsnakes/ppa
+
+RUN apt update && apt install -y python3.10 python3-pip git tree
+
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1
 
 # Create the FLARE workspace and clone NVFlare GitHub repo
 RUN mkdir /flare
 WORKDIR /flare
 RUN git clone https://github.com/NVIDIA/NVFlare.git
 
-# Install latest nvflare and monai from dev source
+# Install latest nvflare
 WORKDIR /flare/NVFlare
 RUN pip install -e . --break-system-packages
 
@@ -19,5 +26,3 @@ RUN pip install -e . --break-system-packages
 RUN pip install jupyter --break-system-packages
 
 WORKDIR /flare
-
-RUN update-alternatives  --set python /usr/bin/python3.10
