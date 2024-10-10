@@ -48,8 +48,7 @@ each notebook can be run independently, it is recommended to first
 execute the contents in notebook 1, 2 and 3 in order, to become
 familiar with NVIDIA FLARE.
 
-### [Chapter 1: Introduction to NVDIA FLARE Basic APIs and
-Simulator](notebooks/01_Intro_APIs_and_Simulator.ipynb)
+### [Chapter 1: Introduction to NVDIA FLARE Basic APIs and Simulator](notebooks/01_Intro_APIs_and_Simulator.ipynb)
 
 In this notebook, we introduce the high-level architecture of NVIDIA
 FLARE and the basics APIs for federated Server, Client and Job. We
@@ -58,8 +57,7 @@ training workflows to a federated paradigm using these APIs, and
 demonstrate how we can easily run a federated workflow locally in a
 simulated environment with FLARE Simulator.
 
-### [Chapter 2: Provisioning and PoC
-Mode](notebooks/02_Provision_and_PoC_Mode.ipynb)
+### [Chapter 2: Provisioning and PoC Mode](notebooks/02_Provision_and_PoC_Mode.ipynb)
 
 In this notebook, we dive in the concept of provisioning in NVIDIA
 FLARE for real-world deployment of federated applications. We
@@ -71,19 +69,16 @@ Proof-of-Concept (PoC) mode with NVIDIA FLARE.
 In this notebook, we show how to manage federated projects using web
 UI with FLARE Dashboard.
 
-### [Example 1: Medical
-Imaging](notebooks/04_Example_1_Medical_Imaging_with_MONAI.ipynb)
+### [Example 1: Medical Imaging](notebooks/04_Example_1_Medical_Imaging_with_MONAI.ipynb)
 
 This notebook includes a real-world example of medical image
 segmentation using NVIDIA FLARE and the MONAI framework.
 
-### [Example 2: Fraud Detection in Financial
-Services](notebooks/05_Example_2_Financial_Services_Fraud_Detection.ipynb)
+### [Example 2: Fraud Detection in Financial Services](notebooks/05_Example_2_Financial_Services_Fraud_Detection.ipynb)
 This notebook includes a real-world example of fraud detection in
 finanicla services using NVIDIA FLARE.
 
-### [Example 3: Cross Country Training for Autonomous
-Vehicles](notebooks/06_Example_3_Autonomous_Vehicles_Cross_Country_Training.ipynb)
+### [Example 3: Cross Country Training for Autonomous Vehicles](notebooks/06_Example_3_Autonomous_Vehicles_Cross_Country_Training.ipynb)
 This notebook includes a real-world example of cross-country training
 in autonomous vehicles using NVIDIA FLARE.
 
