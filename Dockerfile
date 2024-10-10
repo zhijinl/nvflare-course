@@ -13,16 +13,9 @@ RUN apt update && apt install -y python3.10 python3-pip git tree
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1
 
-# Create the FLARE workspace and clone NVFlare GitHub repo
-RUN mkdir /flare
-WORKDIR /flare
+# Clone & install latest nvflare
 RUN git clone https://github.com/NVIDIA/NVFlare.git
-
-# Install latest nvflare
-WORKDIR /flare/NVFlare
-RUN pip install -e . --break-system-packages
+RUN cd /NVFlare && pip install -e . --break-system-packages
 
 # install jupyter-lab
 RUN pip install jupyter --break-system-packages
-
-WORKDIR /flare
