@@ -1,19 +1,12 @@
 #!/bin/bash
 
-JUPYTER_PORT=8888
-docker run --rm --shm-size 8G --gpus=all \
-    --ulimit memlock=-1 --ulimit stack=67108864 \
-    --env LAB_PATH=$(pwd -P) --name nvflare-monai \
-    -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v /tmp:/tmp \
-    -v $(pwd -P)/notebooks:/flare/notebooks \
-    --net=host \
-    gtc-dli-nvflare-monai \
-        jupyter lab /flare \
-            --ip=0.0.0.0 \
-            --allow-root \
-            --no-browser \
-            --port=${JUPYTER_PORT} \
-            --NotebookApp.token="$JUPYTER_TOKEN" \
-            --NotebookApp.password=""
+docker run -d --rm --shm-size 8G --gpus=all \
+       --ulimit memlock=-1 --ulimit stack=67108864 \
+       --env LAB_PATH=$(pwd -P) \
+       --name dli-nvflare \
+       -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro \
+       -v /var/run/docker.sock:/var/run/docker.sock \
+       -v $(pwd -P):/flare \
+       --net=host \
+       gtc-dli-nvflare bash -c \
+       "jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --notebook-dir=/flare --NotebookApp.allow_origin='*'"
