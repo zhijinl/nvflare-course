@@ -3,21 +3,24 @@
 Welcome to course 5 minutes to Federated Learning with NVIDIA FLARE!
 
 Federated Learning empowers institutions to leverage private data by
-enabling local training without centralizing data. This workshop will
-demonstrate how easily existing machine learning (ML) or deep learning
-(DL) algorithms can be adapted to a Federated Learning paradigm using
-NVIDIA Federated Learning Application Runtime Environment (FLARE).
+enabling local training without centralizing data.
 
-With NVIDIA FLARE, adapting any ML or DL algorithm to Federated
-Learning is seamless and independent of the underlying ML framework,
+NVIDIA Federated Learning Application Runtime Environment (FLARE) is
+an open-source Python SDK allowing for efficient implementation of
+production-scale Federated Learning applications. With NVIDIA FLARE,
+adapting any Machine Learning or Deep Learning algorithm to Federated
+Learning is seamless and independent of the underlying framework,
 whether it’s PyTorch, TensorFlow, or traditional frameworks such as
-numpy, scikit-learn, xgboost etc.
+numpy, scikit-learn, xgboost etc. NVIDIA FLARE also provides an
+extensive set of features to bring Federated research to real-world
+production.
 
-In this DLI course, we will illustrate how quickly you can move
-Federated algorithms from simulation to production. Additionally, we
-will showcase diverse applications across industries, such as fraud
-detection in financial services, medical imaging segmentation, and
-cross-country training for autonomous vehicles.
+In this DLI course, we will illustrate how quickly you can implement
+Federated application using NVIDIA FLARE and move from simulation to
+production. Additionally, we will showcase diverse applications across
+industries, such as fraud detection in financial services, medical
+imaging segmentation, and cross-country training for autonomous
+vehicles.
 
 # Course Goals
 
