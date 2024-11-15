@@ -1,6 +1,6 @@
 # [DLIT52033] 5 minutes to Federated Learning with NVIDIA FLARE
 
-Welcome to course 5 minutes to Federated Learning with NVIDIA FLARE!
+Welcome to the course: **5 minutes to Federated Learning with NVIDIA FLARE**!
 
 Federated Learning empowers institutions to leverage private data by
 enabling local training without centralizing data.

@@ -19,3 +19,9 @@ RUN cd /NVFlare && pip install -e . --break-system-packages
 
 # install jupyter-lab
 RUN pip install jupyter --break-system-packages
+
+# install pytorch
+RUN pip install torch torchvision
+
+# install tensorboard
+RUN pip install tensorboard
