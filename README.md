@@ -79,8 +79,8 @@ In this notebook, we introduce the high-level architecture of NVIDIA FLARE and t
 ### [Chapter 2: Provisioning, PoC Mode and Minotoring](notebooks/Chapter_2_Provision_PoC_Mode_and_Monitoring.ipynb)
 In this notebook, we dive in the concept of provisioning in NVIDIA FLARE for properly setting up an FL applications, and demonstrate how to test-run and monitor a provisioned FL application in a local environment, as if in real-world deployment. We illustrate the provision process with an example using Proof-of-Concept (PoC) mode with NVIDIA FLARE.
 
-### [Chapter 3: Advanced Features and Additional Learning Resources](notebooks/Chapter_3_Advanced_Features_and_Additional_Resources.ipynb)
-In this notebook, we introduce advanced features in NVIDIA FLARE for real-world FL deployment, including privacy preserving technologies, support for Confidential Computing, and web UI with FLARE Dashboard. We will finish this notebook by providing additional learning resources for developers who aim to learn more about real-world FL deployment with NVIDIA FLARE.
+### [Chapter 3: Advanced Topics and Additional Learning Resources](notebooks/Chapter_3_Advanced_Topics_and_Additional_Resources.ipynb)
+In this notebook, we cover some advanced topics in NVIDIA FLARE for real-world FL deployment, including privacy preserving technologies, support for Confidential Computing, web UI with FLARE Dashboard and federated large language models support. We will finish this notebook by providing additional learning resources for developers who aim to learn more about real-world FL deployment with NVIDIA FLARE.
 
 ### [Example 1: Medical Imaging](notebooks/Example_1_Medical_Imaging.ipynb)
 This notebook includes a real-world example of medical image segmentation using NVIDIA FLARE and the MONAI framework.
