@@ -8,8 +8,6 @@
 #  tmp directories
 
 sudo chown -R $(id -un):$(id -gn) .
-sudo chown -R $(id -un):$(id -gn) /tmp/monai_workspace
-sudo chown -R $(id -un):$(id -gn) /tmp/fl-dashboard
 
 rm -f .DS_Store
 rm -r notebooks/.Trash*
@@ -17,11 +15,6 @@ rm -r notebooks/.ipynb_checkpoints
 
 # clean out examples
 rm -r notebooks/examples
-rm -r notebooks/hello-numpy-cross-val-workspace
-rm -r notebooks/poc_workspace
-rm -r notebooks/monai_poc_workspace
-rm -r notebooks/example_workspace
-rm -r notebooks/data
-rm -r /tmp/monai_workspce
-rm -r /tmp/fl-dashboard
+rm -r notebooks/temp-workspace
+rm -r /tmp/nvflare/
 

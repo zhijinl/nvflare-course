@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t gtc-dli-nvflare .
+docker build -t nvflare-course .

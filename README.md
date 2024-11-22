@@ -15,7 +15,7 @@ numpy, scikit-learn, xgboost etc. NVIDIA FLARE also provides an
 extensive set of features to bring Federated research to real-world
 production.
 
-In this DLI course, we will illustrate how quickly you can implement
+In this course, we will illustrate how quickly you can implement
 Federated application using NVIDIA FLARE and move from simulation to
 production. Additionally, we will showcase diverse applications across
 industries, such as fraud detection in financial services, medical
@@ -60,45 +60,63 @@ help accelerate the compute for some of the examples in this course.
 
 # Course Structure
 
-This course is broken down into the following 7 notebooks. The first 4
-notebooks give an overview of Federated Learning and NVIDIA FLARE, and
-walk you through NVIDIA FLARE's APIs and tools with hands-on examples
-and exercises. The last 3 notebooks contains real-world industrial
-Federated Learning examples using NVIDIA FLARE. While each notebook
-can run independently, it is recommended to first follow the contents
-in notebook 1, 2, 3 and 4 in order, to become familiar with NVIDIA
-FLARE.
+This course is broken down into the following 4 notebooks. While each
+notebook can run independently, it is recommended to  follow them
+one-by-one in order.
 
-### [Chapter 0: Overview](notebooks/Chapter_0_Overview.ipynb)
+### [Chapter 1: Introduction](Chapter_1_Introduction.ipynb)
 This notebook gives an overview introduction to Federated Learning and
 NVIDIA FLARE.
 
-### [Chapter 1: Introduction to NVDIA FLARE Basic APIs and Simulator](notebooks/Chapter_1_Intro_APIs_and_Simulator.ipynb)
-In this notebook, we introduce the high-level architecture of NVIDIA FLARE and the basics APIs for federated Server, Client and Job. We illustrate with an example how easily it is to adapt typical compute / training workflows to a federated paradigm using these APIs, and showcase how we can easily run a federated workflow locally in a simulated environment with FLARE Simulator.
 
-### [Chapter 2: Provisioning, PoC Mode and Minotoring](notebooks/Chapter_2_Provision_PoC_Mode_and_Monitoring.ipynb)
-In this notebook, we dive in the concept of provisioning in NVIDIA FLARE for properly setting up an FL applications, and demonstrate how to test-run and monitor a provisioned FL application in a local environment, as if in real-world deployment. We illustrate the provision process with an example using Proof-of-Concept (PoC) mode with NVIDIA FLARE.
+### [Chapter 2: Develop a Federated Application](Chapter_2_Develop_Federated_Application.ipynb)
+In this notebook, we focus on how to develop a federated application
+with NVIDIA FLARE's APIs and tools. We introduce the high-level
+architecture of NVIDIA FLARE and basics APIs to develop federated
+Server, Client and Job. We illustrate with an example how easily it is
+to adapt traditional centralized code to a federated code using these
+APIs, and showcase how we can easily run a federated application
+locally in a simulated environment with FLARE Simulator.
 
-### [Chapter 3: Advanced Topics and Additional Learning Resources](notebooks/Chapter_3_Advanced_Topics_and_Additional_Resources.ipynb)
-In this notebook, we cover some advanced topics in NVIDIA FLARE for real-world FL deployment, including privacy preserving technologies, support for Confidential Computing, web UI with FLARE Dashboard and federated large language models support. We will finish this notebook by providing additional learning resources for developers who aim to learn more about real-world FL deployment with NVIDIA FLARE.
 
-### [Example 1: Medical Imaging](notebooks/Example_1_Medical_Imaging.ipynb)
-This notebook includes a real-world example of medical image segmentation using NVIDIA FLARE and the MONAI framework.
+### [Chapter 3: Provision, Run and Monitor a Federated Project](Chapter_3_Provision_Run_and_Monitor_Federated_Project.ipynb)
+In this notebook, we focus on how to properly set up a federated
+project and run it in a sandbox environment. We dive in the concept of
+project provisioning in NVIDIA FLARE, and demonstrate how to test-run
+and monitor a provisioned federated project in a local environment
+using Proof-of-Concept (PoC) mode, as if in a real-world
+deployment. We illustrate project provisioning, running and monitoring
+with an example.
 
-### [Example 2: Fraud Detection in Financial Services](notebooks/Example_2_Financial_Services_Fraud_Detection.ipynb)
-This notebook includes a real-world example of fraud detection in finanicla services using NVIDIA FLARE.
 
-### [Example 3: Cross Country Training for Autonomous Vehicles](notebooks/Example_3_Autonomous_Vehicles_Cross_Country_Training.ipynb)
-This notebook includes a real-world example of cross-country training in autonomous vehicles using NVIDIA FLARE.
+### [Chapter 4: Advanced Topics, Use Cases and Additional Learning Resources](Chapter_4_Advanced_Topics_and_Additional_Resources.ipynb)
+In this notebook, we introduce advanced topics in NVIDIA FLARE for
+real-world FL deployment, including security features such as privacy
+preserving technologies, site policy management and support for
+Confidential Computing, web UI with FLARE Dashboard, additional
+deployment options and Flower-on-FLARE. Then we will briefly cover
+typical use-cases and real-world federated projects leveraging NVIDIA
+FLARE. We will finish this notebook by providing additional learning
+resources for developers who aim to learn more about real-world FL
+deployment with NVIDIA FLARE.
 
 # Set-up Instructions
 
+### Build Course
+
 Run the script `build-docker.sh` to build a docker image for this
-course. You can also directly run `docker build` with the `Dockerfile`
+course:
+```bash
+./build-docker.sh
+```
+
+You can also directly run `docker build` with the `Dockerfile`
 included in this directory:
 ```bash
-docker build -t gtc-dli-nvflare .
+docker build -t nvflare-course .
 ```
+
+### Launch Course
 
 To launch the course, run the following script:
 ```bash
@@ -109,16 +127,25 @@ Or execute the following command:
 docker run -d --rm --shm-size 8G --gpus=all \
        --ulimit memlock=-1 --ulimit stack=67108864 \
        --env LAB_PATH=$(pwd -P) \
-       --name dli-nvflare \
+       --name nvflare-course \
        -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro \
        -v /var/run/docker.sock:/var/run/docker.sock \
        -v $(pwd -P):/flare \
        --net=host \
-       gtc-dli-nvflare bash -c \
+       nvflare-course bash -c \
        "jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --notebook-dir=/flare --NotebookApp.allow_origin='*'"
 ```
 This runs the container in a detached state.
 
 You can access the course by visiting `localhost:8888` in
-your web browser.  To stop the container when finished, run `docker
-stop dli-nvflare`.
+your web browser.
+
+### Stop Course
+
+To stop the container when finished, run `docker
+stop nvflare-course`.
+
+### Clean Up Course
+
+To clean up temporary files generated during the course, run
+`./cleanup.sh`.
