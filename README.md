@@ -1,4 +1,4 @@
-# [DLIT52033] 5 minutes to Federated Learning with NVIDIA FLARE
+# 5 minutes to Federated Learning with NVIDIA FLARE
 
 Welcome to the course: **5 minutes to Federated Learning with NVIDIA FLARE**!
 
