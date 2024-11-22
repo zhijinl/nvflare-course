@@ -89,7 +89,7 @@ deployment. We illustrate project provisioning, running and monitoring
 with an example.
 
 
-### [Chapter 4: Advanced Topics, Use Cases and Additional Learning Resources](notebooks/Chapter_4_Advanced_Topics_and_Additional_Resources.ipynb)
+### [Chapter 4: Advanced Topics, Use Cases and Additional Learning Resources](notebooks/Chapter_4_Advanced_Topics_Use_Cases_and_Additional_Resources.ipynb)
 In this notebook, we introduce advanced topics in NVIDIA FLARE for
 real-world FL deployment, including security features such as privacy
 preserving technologies, site policy management and support for
