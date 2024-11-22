@@ -64,12 +64,12 @@ This course is broken down into the following 4 notebooks. While each
 notebook can run independently, it is recommended to  follow them
 one-by-one in order.
 
-### [Chapter 1: Introduction](Chapter_1_Introduction.ipynb)
+### [Chapter 1: Introduction](notebooks/Chapter_1_Introduction.ipynb)
 This notebook gives an overview introduction to Federated Learning and
 NVIDIA FLARE.
 
 
-### [Chapter 2: Develop a Federated Application](Chapter_2_Develop_Federated_Application.ipynb)
+### [Chapter 2: Develop a Federated Application](notebooks/Chapter_2_Develop_Federated_Application.ipynb)
 In this notebook, we focus on how to develop a federated application
 with NVIDIA FLARE's APIs and tools. We introduce the high-level
 architecture of NVIDIA FLARE and basics APIs to develop federated
@@ -79,7 +79,7 @@ APIs, and showcase how we can easily run a federated application
 locally in a simulated environment with FLARE Simulator.
 
 
-### [Chapter 3: Provision, Run and Monitor a Federated Project](Chapter_3_Provision_Run_and_Monitor_Federated_Project.ipynb)
+### [Chapter 3: Provision, Run and Monitor a Federated Project](notebooks/Chapter_3_Provision_Run_and_Monitor_Federated_Project.ipynb)
 In this notebook, we focus on how to properly set up a federated
 project and run it in a sandbox environment. We dive in the concept of
 project provisioning in NVIDIA FLARE, and demonstrate how to test-run
@@ -89,7 +89,7 @@ deployment. We illustrate project provisioning, running and monitoring
 with an example.
 
 
-### [Chapter 4: Advanced Topics, Use Cases and Additional Learning Resources](Chapter_4_Advanced_Topics_and_Additional_Resources.ipynb)
+### [Chapter 4: Advanced Topics, Use Cases and Additional Learning Resources](notebooks/Chapter_4_Advanced_Topics_and_Additional_Resources.ipynb)
 In this notebook, we introduce advanced topics in NVIDIA FLARE for
 real-world FL deployment, including security features such as privacy
 preserving technologies, site policy management and support for
