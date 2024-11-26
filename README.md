@@ -73,7 +73,7 @@ NVIDIA FLARE.
 In this notebook, we focus on how to develop a federated application
 with NVIDIA FLARE's APIs and tools. We introduce the high-level
 architecture of NVIDIA FLARE and basics APIs to develop federated
-Server, Client and Job. We illustrate with an example how easily it is
+Server, Client and Job. We illustrate with an example how easy it is
 to adapt traditional centralized code to a federated code using these
 APIs, and showcase how we can easily run a federated application
 locally in a simulated environment with FLARE Simulator.
