@@ -9,4 +9,4 @@ docker run -d --rm --shm-size 8G --gpus=all \
        -v $(pwd -P):/flare \
        --net=host \
        nvflare-course bash -c \
-       "jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --notebook-dir=/flare --NotebookApp.allow_origin='*'"
+       "jupyter lab /flare/notebooks/Chapter_0_Welcome.ipynb --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --notebook-dir=/flare --NotebookApp.allow_origin='*'"
