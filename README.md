@@ -3,7 +3,13 @@
 Welcome to the course: **5 minutes to Federated Learning with NVIDIA FLARE**!
 
 Federated Learning empowers institutions to leverage private data by
-enabling local training without centralizing data.
+enabling local training without centralizing data. With increasing
+demand of access to high quality, multi-institutional data, Federated
+Learning has been gaining traction as an effective paradigm to develop
+robust AI while respecting data regulations. However, implementing
+Federated Learning is not an easy task. Carefully designed software
+tools are needed to efficiently prototype Federated projects and bring
+them to real-world scale.
 
 NVIDIA Federated Learning Application Runtime Environment (FLARE) is
 an open-source Python SDK allowing for efficient implementation of
@@ -16,7 +22,7 @@ extensive set of features to bring Federated research to real-world
 production.
 
 In this course, we will illustrate how quickly you can implement
-Federated application using NVIDIA FLARE and move from simulation to
+Federated applications using NVIDIA FLARE and move from simulation to
 production. Additionally, we will showcase diverse applications across
 industries, such as fraud detection in financial services, medical
 imaging segmentation, and cross-country training for autonomous
@@ -25,9 +31,9 @@ vehicles.
 # Course Goals
 
 In this course, our primary goal is to introduce the fundamentals of
-NVIDIA FLARE to researchers, scientits and developers.
+NVIDIA FLARE to researchers, scientists and developers.
 
-This course is considered as a beginer-level course on NVIDIA FLARE,
+This course is considered as a beginner-level course on NVIDIA FLARE,
 therefore the content is tailored to be on API usage level, without
 deep diving into too much details of the inner implementations. We do
 not aim for you to become an NVIDIA FLARE developer after the course,
@@ -53,7 +59,7 @@ Prerequisites of this course include:
 This course contains multiple examples that we will walkthrough and
 run together. It is helpful to have experiences in machine learning /
 deep learning libraries such as `numpy`, `pytorch`, but these are not
-mandatory, as we will only us basic APIs of these SDKs. Regarding
+mandatory, as we will only use basic APIs of these SDKs. Regarding
 hardware, most of the examples can be run on NVIDIA T4 or equivalent
 GPUs, or even in CPU-only environment. Having more powerful GPUs could
 help accelerate the compute for some of the examples in this course.
