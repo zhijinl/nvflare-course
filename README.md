@@ -116,7 +116,7 @@ documentation](https://nvflare.readthedocs.io/en/main/index.html) and
 
 # Set-up Instructions
 
-### Build Course
+### Build the Course
 
 > **NOTE**:
 > To successfully build the Docker image for this course, you need to
@@ -134,7 +134,7 @@ included in this directory:
 docker build -t nvflare-course .
 ```
 
-### Launch Course
+### Launch the Course
 
 > **NOTE**:
 > To run the examples in this course on an NVIDIA GPU, you need to
@@ -164,12 +164,12 @@ This runs the container in a detached state.
 You can access the course by visiting `localhost:8888` in
 your web browser.
 
-### Stop Course
+### Stop the Course
 
 To stop the container when finished, run `docker
 stop nvflare-course`.
 
-### Clean Up Course
+### Clean Up
 
 To clean up temporary files generated during the course, run
 `./cleanup.sh`.
