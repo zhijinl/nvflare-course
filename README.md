@@ -106,9 +106,21 @@ FLARE. We will finish this notebook by providing additional learning
 resources for developers who aim to learn more about real-world FL
 deployment with NVIDIA FLARE.
 
+# Go Beyond This Course
+
+There are additional free learning materials online that go beyond the
+scope of this course. Feel free to check out NVIDIA FLARE's [general
+webpage](https://nvidia.github.io/NVFlare/), [official
+documentation](https://nvflare.readthedocs.io/en/main/index.html) and
+[tutorial catalog](https://nvidia.github.io/NVFlare/catalog/).
+
 # Set-up Instructions
 
-### Build Course
+### Build the Course
+
+> **NOTE**:
+> To successfully build the Docker image for this course, you need to
+> have a Linux environment with Docker.
 
 Run the script `build-docker.sh` to build a docker image for this
 course:
@@ -122,7 +134,13 @@ included in this directory:
 docker build -t nvflare-course .
 ```
 
-### Launch Course
+### Launch the Course
+
+> **NOTE**:
+> To run the examples in this course on an NVIDIA GPU, you need to
+> have an NVIDIA GPU Driver with version >=560.28.03. Otherwise,
+> please remove the `--gpu=all` tag in the `docker run` command
+> below.
 
 To launch the course, run the following script:
 ```bash
@@ -146,12 +164,12 @@ This runs the container in a detached state.
 You can access the course by visiting `localhost:8888` in
 your web browser.
 
-### Stop Course
+### Stop the Course
 
 To stop the container when finished, run `docker
 stop nvflare-course`.
 
-### Clean Up Course
+### Clean Up
 
 To clean up temporary files generated during the course, run
 `./cleanup.sh`.
