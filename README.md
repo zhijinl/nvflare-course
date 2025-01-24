@@ -136,30 +136,22 @@ docker build -t nvflare-course .
 
 ### Launch the Course
 
-> **NOTE**:
-> To run the examples in this course on an NVIDIA GPU, you need to
-> have an NVIDIA GPU Driver with version >=560.28.03. Otherwise,
-> please remove the `--gpu=all` tag in the `docker run` command
-> below.
-
 To launch the course, run the following script:
 ```bash
 ./run-docker.sh
 ```
-Or execute the following command:
+This runs the container in a detached state. By default, the script
+will try to launch the container in GPU mode with CUDA enabled. You
+can force launching the container in CPU mode with argument `--cpu`:
 ```bash
-docker run -d --rm --shm-size 8G --gpus=all \
-       --ulimit memlock=-1 --ulimit stack=67108864 \
-       --env LAB_PATH=$(pwd -P) \
-       --name nvflare-course \
-       -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro \
-       -v /var/run/docker.sock:/var/run/docker.sock \
-       -v $(pwd -P):/flare \
-       --net=host \
-       nvflare-course bash -c \
-       "jupyter lab /flare/notebooks/Chapter_0_Welcome.ipynb --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --notebook-dir=/flare --NotebookApp.allow_origin='*'"
+./run-docker.sh --cpu
 ```
-This runs the container in a detached state.
+
+> **NOTE**:
+> To run the container with CUDA enabled, you need to have an NVIDIA
+> GPU Driver with version >=525.60.13. Otherwise, a CPU-only container
+> will be launched even without the `--cpu` argument. This is handled
+> automatically by the `run-docker.sh` script.
 
 You can access the course by visiting `localhost:8888` in
 your web browser.
