@@ -6,7 +6,7 @@ participants:
   # Change the name of the server (server1) to the Fully Qualified Domain Name
   # (FQDN) of the server, for example: server1.example.com.
   # Ensure that the FQDN is correctly mapped in the /etc/hosts file.
-  - name: server1
+  - name: server
     type: server
     org: nvidia
     fed_learn_port: 8002
@@ -63,7 +63,7 @@ builders:
         # 
         overseer_exists: false
         args:
-          sp_end_point: server1:8002:8003
+          sp_end_point: server:8002:8003
 
   - path: nvflare.lighter.impl.cert.CertBuilder
   - path: nvflare.lighter.impl.signature.SignatureBuilder
